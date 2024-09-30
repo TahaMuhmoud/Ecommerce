@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply w-screen min-h-screen font-main text-secondary transition-colors duration-[1s] ease-background overflow-x-hidden;
+  }
+  .text-vbig {
+    @apply text-[6vw] font-black leading-tight;
+  }
+  .color-main {
+    @apply text-white bg-clr-main;
+  }
+}
+*::-webkit-scrollbar {
+  @apply w-1;
+}
+.light {
+  --background: 255, 255, 255;
+  --secondary: 0, 0, 0;
+  --main: 0, 27, 104;
+  --clr-two: 229, 229, 229;
+}
+
+.dark {
+  --background: 0, 0, 0;
+  --secondary: 255, 255, 255;
+  --main: 9, 23, 62;
+  --clr-two: 26, 26, 26;
+}
+
+.range-inp::-webkit-slider-thumb {
+  pointer-events: all;
+  background-color: rgb(var(--secondary));
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+}
